@@ -55,15 +55,8 @@ void LinkedList::insert_at(int index, int val) {
     }
 
     if (index == 0) {
-        // if inserting at head, there are two cases
-        if (current) {
-            // if the list is non-empty, treat it like insert_front
-            current->next = nPtr_head;
-            nPtr_head = newNode;
-        } else {
-            // otherwise just make it the head
-            nPtr_head = newNode;
-        }
+        newNode->next = nPtr_head;
+        nPtr_head = newNode;
     } else {
         // make the previous node point to the new node and make the
         // new node point to the next node

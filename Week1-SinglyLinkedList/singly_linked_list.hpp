@@ -4,6 +4,8 @@ class LinkedList {
 public:
     LinkedList();
     ~LinkedList();
+    LinkedList(const LinkedList&) = delete;
+    LinkedList& operator=(const LinkedList&) = delete;
 
     void insert_front(int val);
     void insert_back(int val);
